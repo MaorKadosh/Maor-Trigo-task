@@ -17,11 +17,6 @@ class Gate:
     deley : int
         I'm decide to use thread- We don’t want to cause any downtime, but we also don’t want to wait longer than necessary to finish the migration. 
         Threads are a method of doing concurrency in Python. You can run multiple threads at once to increase your application’s throughput.
-
-    Methods
-    -------
-    says(sound=None)
-        Prints the animals name and what sound it makes
     """
     def __init__(self):
         '''
@@ -46,7 +41,13 @@ class Gate:
 
 gate = Gate()
 while True:
+        """
+        This is a while loop that creates connections recursively
+        """
     try:
+        """
+        Using try ensures that the code runs even if there is an exception.
+        """
         with socket.socket() as s:
             host = 'gate-mock'
             port = 5050
