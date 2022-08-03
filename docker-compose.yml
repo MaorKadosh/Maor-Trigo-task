@@ -1,0 +1,7 @@
+version: "3"
+services:
+  gate-mock:
+    build: Gate-Mock
+
+  mock-gate-controller:
+    build: Mock-Gate-Conttroller
