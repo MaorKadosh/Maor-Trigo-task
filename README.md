@@ -5,7 +5,8 @@
 Maor-Trigo-Gate Task is a Python library for dealing with my task- to implement a mock-gate.
 
 ## Installation
-Download the files to the computer and run the command in the terminal:
+Clone the repo to your computre,
+and run the command in the terminal:
 docker-compose up
 
 
