@@ -3,6 +3,26 @@ import time
 import threading
 
 class Gate:
+        """
+    A class used to represent Gate-Mock status
+
+    ...
+
+    Attributes
+    ----------
+    open : Boolean variable - True or False
+        The status of the gate is open
+    close : Boolean variable - True or False
+        The status of the gate is close
+    deley : int
+        I'm decide to use thread- We don’t want to cause any downtime, but we also don’t want to wait longer than necessary to finish the migration. 
+        Threads are a method of doing concurrency in Python. You can run multiple threads at once to increase your application’s throughput.
+
+    Methods
+    -------
+    says(sound=None)
+        Prints the animals name and what sound it makes
+    """
     def __init__(self):
         '''
         :param
@@ -19,7 +39,7 @@ class Gate:
         return self.__is_open
 
     def deley(self):
-            # TCP threade for making delay of 3 seconds - during these seconds the gate will remain open.
+            # Threade for making delay of 3 seconds - during these seconds the gate will remain open.
         time.sleep(3)
         self.close()
 
