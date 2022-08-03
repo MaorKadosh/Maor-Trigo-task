@@ -19,6 +19,7 @@ class Gate:
         return self.__is_open
 
     def deley(self):
+            # TCP threade for making delay of 3 seconds - during these seconds the gate will remain open.
         time.sleep(3)
         self.close()
 
